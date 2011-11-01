@@ -1,0 +1,14 @@
+select * from items where id in (select crafted_item_generated_id from crafted_items where component_item_id = 1613)
+
+
+select distinct component_item_id from crafted_items
+
+
+select distinct component_item_id from crafted_items where component_item_id  not in (select id from items)
+select distinct crafted_item_generated_id from crafted_items where component_item_id  not in (select id from items)
+
+
+select * from items where id in (select distinct crafted_item_generated from crafted_items)
+
+
+delete from crafted_items where crafted_item_generated_id  in (select distinct crafted_item_generated_id from crafted_items where crafted_item_generated_id not in (select id from items))
