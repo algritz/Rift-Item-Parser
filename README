@@ -1,0 +1,3 @@
+This is a series of ruby scripts that allows to parse Trion's XML dump file sin store the information in a SQLite3 Database.
+
+A second set of script allows to sent that information back into the RIFT-Auction-Management tool Database
